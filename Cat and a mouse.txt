@@ -1,0 +1,38 @@
+char* catAndMouse(int x, int y, int z)
+{
+
+    int cat1,cat2;
+    cat2=z-y;
+    cat1=z-x;
+    if(cat1<0)
+    {
+        cat1= -1*cat1;
+    } 
+    else {
+    cat1=cat1;
+    } 
+    if(cat2<0)
+    {
+        cat2= -1*cat2;
+    } 
+    else {
+    cat2=cat2;
+    } 
+if(cat1>cat2)
+{
+    return "Cat B";
+   // printf("Cat B");
+} 
+if(cat1<cat2)
+{
+   return "Cat A"; 
+   // printf("Cat A");
+}   
+if(cat1==cat2)
+{
+    return "Mouse C";
+    //printf(" Mouse C");
+}   
+return 0;
+}
+
