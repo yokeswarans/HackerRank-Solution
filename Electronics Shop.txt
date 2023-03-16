@@ -1,0 +1,30 @@
+int getMoneySpent(int keyboards_count, int* keyboards, int drives_count, int* drives, int b) {
+    /*
+     * Write your code here.
+     */
+     int mul=keyboards_count*drives_count;
+     int dummy[mul];
+     int max=-1,k=0;
+     for(int i=0;i<keyboards_count;i++)
+     {
+         for(int j=0;j<drives_count;j++)
+        {
+           dummy[k]=keyboards[i]+drives[j];
+            k++;
+        }
+        
+     }
+     for( k=0;k<mul;k++)
+     {
+         if(max<=dummy[k]&&dummy[k]<=b)
+         {
+             max=dummy[k];
+         }
+     }
+     
+     
+    
+        return max;
+
+}
+
