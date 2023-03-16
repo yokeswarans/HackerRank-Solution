@@ -1,0 +1,37 @@
+int divisibleSumPairs(int n, int k, int ar_count, int* ar) {
+     ar_count=0;
+    for(int i=0;i<n-1;i++)
+    {
+        for(int j=i+1;j<n;j++)
+        {
+            if((ar[i]+ar[j])%k==0)
+            {
+                ar_count++;
+            }
+        }
+    }
+    return ar_count;
+
+}
+int migratoryBirds(int arr_count, int* arr)
+ {
+    int fre[6]={0};
+    int k,re;
+    for( k=0;k<arr_count;k++)
+    {
+        fre[arr[k]]++;
+    }
+    int max=fre[0];
+    for(int i=0;i<6;i++)
+    {
+        if(fre[i]>max)
+        {
+            max=fre[i];
+            re=i;
+        }
+        
+    }
+        return re;
+
+}
+
